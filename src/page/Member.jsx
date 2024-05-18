@@ -21,7 +21,6 @@ const Member = () => {
     const [open, setOpen] = useState(false);
 
     const getAllMember = async () => {
-        console.log(`${process.env.REACT_APP_SERVER_URL}/member/get-all-members`);
         await fetch(`${process.env.REACT_APP_SERVER_URL}/member/get-all-members`,
             { method: "GET" })
             .then(res => res.json())
